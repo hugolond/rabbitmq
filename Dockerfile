@@ -5,7 +5,5 @@ COPY rabbitmq.conf /etc/rabbitmq/
 ENV RABBITMQ_NODENAME=rabbit@localhost
 
 RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
-
-EXPOSE 5672
-
+RUN -d -p 5672:5672 rabbitmq:3.8.0-management
 USER rabbitmq:rabbitmq
