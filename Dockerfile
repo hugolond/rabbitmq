@@ -6,6 +6,6 @@ ENV RABBITMQ_NODENAME=rabbit@localhost
 
 RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
 
-RUN -p 5672:5672 -p 15672:15672
+EXPOSE 5672
 
 USER rabbitmq:rabbitmq
